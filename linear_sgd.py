@@ -5,6 +5,8 @@
 '''
 import numpy as np
 import math
+import time
+
 
 
 print(__doc__)
@@ -56,7 +58,7 @@ def train(x_train,y_train):
 
     return loss
 
-
+start = time.clock()
 for epoch in range(0,100):
      begin = 0
      while begin < len(x_train):
@@ -69,6 +71,11 @@ for epoch in range(0,100):
           begin = end
 
           print("epoch: %d-loss: %f"%(epoch,loss))      #打印迭代次数和损失函数
+          if loss < 0.1:
+              end = time.clock()
+              print("收敛时间：%s ms"%str(end-start))
+              print("收敛成功%d-epoch"%epoch)
+              break
 
 
 print(weight)
