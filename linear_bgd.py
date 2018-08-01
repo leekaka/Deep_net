@@ -1,7 +1,11 @@
+'''
+普通的全梯度下降方法
+'''
 import numpy as np
 import math 
 
-# 普通的全梯度下降方法
+
+print(_doc_)
 
 sample = 10
 num_input = 5
