@@ -5,7 +5,7 @@ import numpy as np
 import math 
 
 
-print(_doc_)
+print(__doc__)
 
 sample = 10
 num_input = 5
