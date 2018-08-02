@@ -13,7 +13,8 @@ num_input = 5
 #加入训练数据
 np.random.seed(0)
 normalRand = np.random.normal(0,0.1,sample)      # 10个均值为0方差为0.1 的随机数  (b)
-weight = [5,100,-5,-400,0.02]                    # 1 * 5 权重
+weight = [5,100,-5,-400,0.02]  
+np.random.seed(0)                  # 1 * 5 权重
 x_train = np.random.random((sample, num_input))  #x 数据（10 * 5）
 y_train = np.zeros((sample,1))                   # y数据（10 * 1）
 
@@ -24,7 +25,7 @@ for i in range (0,len(x_train)):
 		total += weight[j]*x_train[i,j]
 	y_train[i] = total+ normalRand[i]
 
-
+print(y_train)
 	
 
 # 训练
@@ -82,4 +83,25 @@ for epoch in range(0,500):
 	recordGrade[num_input]	 = recordGrade[num_input]*discount + grade
 	weight[num_input] = weight[num_input] - rate*recordGrade[num_input]
 
-print(weight)
+
+#预测
+#predict
+y_predict = np.zeros(len(x_train))
+for i in range (0,len(x_train)):
+	total = 0
+	for j in range(0,len(x_train[i])):
+		total += weight[j]*x_train[i,j]
+	y_predict[i] = total+ normalRand[i]
+	
+for i in range(0,len(y_train)):
+        print(y_predict[i] - y_train[i])
+
+
+
+
+
+
+
+
+
+
