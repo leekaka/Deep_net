@@ -40,6 +40,7 @@ rate = 0.02
 
 start = time.clock()
 for epoch in range(0,500):
+
 	#预先走一步，计算下一个的权重w
 	oldweight = np.copy(weight)
 	for i in range(0,len(weight)):
