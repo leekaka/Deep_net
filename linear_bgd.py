@@ -35,7 +35,7 @@ weight = np.random.random(num_input+1)
 rate = 0.04
 
 start = time.clock()
-for epoch in range(0,500):
+for epoch in range(0,1000):
 
 	# 计算loss
 	predictY = np.zeros((len(x_train)))
@@ -51,7 +51,7 @@ for epoch in range(0,500):
 		
 	print("epoch: %d-loss: %f"%(epoch,loss))                          #打印迭代次数和损失函数
 
-	if loss < 0.1:
+	if loss < 0.01:
 		end = time.clock()
 		print("收敛时间：%s ms"%str(end-start))
 		print("收敛成功%d-epoch"%epoch)
