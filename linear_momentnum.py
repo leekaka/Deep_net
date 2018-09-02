@@ -1,8 +1,8 @@
-'''
+"""
 普通的全梯度下降方法
-'''
+"""
+
 import numpy as np
-import math 
 import time
 
 
