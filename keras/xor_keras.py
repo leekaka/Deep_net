@@ -3,8 +3,9 @@ from keras.layers import Dense, Activation
 import numpy as np
 
 import matplotlib.pyplot as plt
+
 def main():
-	x_train = np.array([[1,0],[1,1],[0,0],[0,1]])
+	x_train = np.array([[1, 0], [1, 1], [0, 0], [0, 1]])
 	y_train = np.array([[0],[1],[0],[0]])
 
 	model = Sequential()

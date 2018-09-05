@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../PythonSample/.idea/PythonSample.iml" filepath="$PROJECT_DIR$/../PythonSample/.idea/PythonSample.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/deep_net.iml" filepath="$PROJECT_DIR$/.idea/deep_net.iml" />
     </modules>
   </component>
