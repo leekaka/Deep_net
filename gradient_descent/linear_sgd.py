@@ -31,7 +31,6 @@ weight = np.random.random(num_input+1)
 rate = 0.07
 batch = 4
 
-
 def train(x, y):
     # 计算损失
     global weight, rate
