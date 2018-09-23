@@ -12,8 +12,8 @@ num_input = 5
 
 # 加入训练数据
 np.random.seed(0)
-normalRand = np.random.normal(0, 0.1, sample)      # 10个均值为0方差为0.1 的随机数  (b)
-weight = [7, 85, -10, -600, 0.05]
+b = np.random.normal(0, 0.1, sample)      # 10个均值为0方差为0.1 的随机数  (b)
+w = [7, 85, -10, -600, 20]
 np.random.seed(0)                                  # 1 * 5 权重
 x_train = np.random.random((sample, num_input))    # x 数据（10 * 5）
 y_train = np.zeros((sample, 1))                    # y数据（10 * 1）
@@ -22,25 +22,25 @@ y_train = np.zeros((sample, 1))                    # y数据（10 * 1）
 for i in range(0, len(x_train)):
     total = 0
     for j in range(0, len(x_train[i])):
-        total += weight[j] * x_train[i, j]
-    y_train[i] = total + normalRand[i]
+        total += w[j] * x_train[i, j]
+    y_train[i] = total + b[i]
 
 # 训练
 np.random.seed(0)
 weight = np.random.random(num_input+1)
 
-rate = 0.04
+rate = 0.07
 start = time.clock()
-for epoch in range(0, 2000):                     # 计算loss
+for epoch in range(0, 10000):                     # 计算loss
     predictY = np.zeros((len(x_train)))
     for i in range(0, len(x_train)):
         predictY[i] = np.dot(x_train[i], weight[0:num_input]) + weight[num_input]
-        loss = 0
-    for i in range(0,len(x_train)):
+    loss = 0
+    for i in range(0, len(x_train)):
         loss += (predictY[i]-y_train[i]) ** 2
 
     print("epoch: %d-loss: %f" % (epoch, loss))    # 打印迭代次数和损失函数
-    if loss < 0.1:
+    if loss < 0.05:
         end = time.clock()
         print("收敛时间:%s ms" % str(end-start))
         print("迭代次数:%d-epoch" % epoch)

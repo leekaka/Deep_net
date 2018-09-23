@@ -1,20 +1,18 @@
-'''
+"""
 随机全梯度下降方法
 改进：进行到一部分的时候即更新权重
 
-'''
+"""
+
 import numpy as np
-import math
 import time
-
-
 
 print(__doc__)
 
 sample = 10
 num_input = 5
 
-#加入训练数据
+# 训练参数
 np.random.seed(0)
 normalRand = np.random.normal(0,0.1,sample)      # 10个均值为0方差为0.1 的随机数  (b)
 weight = [7,99,-1,-333,0.06]                     # 1 * 5 权重
@@ -42,8 +40,8 @@ def train(x_train,y_train):
     for i in range(0,len(x_train)):
         predictY[i] = np.dot(x_train[i],weight[0:num_input])+ weight[num_input]
         loss = 0
-        for i in range(0,len(x_train)):
-            loss += (predictY[i]-y_train[i])**2
+    for i in range(0,len(x_train)):
+        loss += (predictY[i]-y_train[i])**2
 
     for i in range(0,len(weight)-1):
         grade = 0
@@ -59,7 +57,7 @@ def train(x_train,y_train):
     return loss
 
 start = time.clock()
-for epoch in range(0,100):
+for epoch in range(0,1000):
      begin = 0
      while begin < len(x_train):
           end = begin + batch
