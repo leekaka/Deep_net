@@ -1,0 +1,24 @@
+digraph Tree {
+node [shape=box] ;
+0 [label="age=youth <= 0.5\nentropy = 0.388\nsamples = 14\nvalue = [[13, 1]\n[13, 1]\n[13, 1]\n[13, 1]\n[13, 1]\n[13, 1]\n[13, 1]\n[13, 1]\n[12, 2]\n[13, 1]\n[13, 1]\n[13, 1]\n[13, 1]]"] ;
+1 [label="age=middle_aged <= 0.5\nentropy = 0.361\nsamples = 10\nvalue = [[9, 1]\n[9, 1]\n[10, 0]\n[9, 1]\n[9, 1]\n[10, 0]\n[9, 1]\n[9, 1]\n[10, 0]\n[9, 1]\n[9, 1]\n[9, 1]\n[9, 1]]"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="age=senior <= 0.5\nentropy = 0.319\nsamples = 7\nvalue = [[7, 0]\n[7, 0]\n[7, 0]\n[6, 1]\n[7, 0]\n[7, 0]\n[6, 1]\n[6, 1]\n[7, 0]\n[6, 1]\n[6, 1]\n[6, 1]\n[6, 1]]"] ;
+1 -> 2 ;
+3 [label="entropy = 0.278\nsamples = 5\nvalue = [[5, 0]\n[5, 0]\n[5, 0]\n[5, 0]\n[5, 0]\n[5, 0]\n[5, 0]\n[4, 1]\n[5, 0]\n[4, 1]\n[4, 1]\n[4, 1]\n[4, 1]]"] ;
+2 -> 3 ;
+4 [label="entropy = 0.154\nsamples = 2\nvalue = [[2, 0]\n[2, 0]\n[2, 0]\n[1, 1]\n[2, 0]\n[2, 0]\n[1, 1]\n[2, 0]\n[2, 0]\n[2, 0]\n[2, 0]\n[2, 0]\n[2, 0]]"] ;
+2 -> 4 ;
+5 [label="student=no <= 0.5\nentropy = 0.212\nsamples = 3\nvalue = [[2, 1]\n[2, 1]\n[3, 0]\n[3, 0]\n[2, 1]\n[3, 0]\n[3, 0]\n[3, 0]\n[3, 0]\n[3, 0]\n[3, 0]\n[3, 0]\n[3, 0]]"] ;
+1 -> 5 ;
+6 [label="entropy = 0.154\nsamples = 2\nvalue = [[2, 0]\n[1, 1]\n[2, 0]\n[2, 0]\n[1, 1]\n[2, 0]\n[2, 0]\n[2, 0]\n[2, 0]\n[2, 0]\n[2, 0]\n[2, 0]\n[2, 0]]"] ;
+5 -> 6 ;
+7 [label="entropy = 0.0\nsamples = 1\nvalue = [[0, 1]\n[1, 0]\n[1, 0]\n[1, 0]\n[1, 0]\n[1, 0]\n[1, 0]\n[1, 0]\n[1, 0]\n[1, 0]\n[1, 0]\n[1, 0]\n[1, 0]]"] ;
+5 -> 7 ;
+8 [label="income=high <= 0.5\nentropy = 0.202\nsamples = 4\nvalue = [[4, 0]\n[4, 0]\n[3, 1]\n[4, 0]\n[4, 0]\n[3, 1]\n[4, 0]\n[4, 0]\n[2, 2]\n[4, 0]\n[4, 0]\n[4, 0]\n[4, 0]]"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="entropy = 0.154\nsamples = 2\nvalue = [[2, 0]\n[2, 0]\n[1, 1]\n[2, 0]\n[2, 0]\n[1, 1]\n[2, 0]\n[2, 0]\n[2, 0]\n[2, 0]\n[2, 0]\n[2, 0]\n[2, 0]]"] ;
+8 -> 9 ;
+10 [label="entropy = 0.0\nsamples = 2\nvalue = [[2, 0]\n[2, 0]\n[2, 0]\n[2, 0]\n[2, 0]\n[2, 0]\n[2, 0]\n[2, 0]\n[0, 2]\n[2, 0]\n[2, 0]\n[2, 0]\n[2, 0]]"] ;
+8 -> 10 ;
+}
