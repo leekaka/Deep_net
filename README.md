@@ -10,11 +10,12 @@
 * 网络结构
   </br>a、增加简单的异或模拟网络，一个隐藏层，很显然，可以改写成任意的逻辑模拟（包含矩阵和向量两种写法）
 * mnist识别
+
 * 增加keras初体验
   </br>a、网络结构体验
   </br>b、mnsit测试
-  
+   
+* [python基础内容](https://github.com/leekaka/deep_net/tree/master/basic_python)
+
 * 常用工具
   </br>a、批量改名程序
- 
-* 增加python基础内容
