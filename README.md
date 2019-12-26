@@ -17,5 +17,5 @@
    
 * [python基础内容](https://github.com/leekaka/deep_net/tree/master/basic_python)
 
-* 常用工具
+* [常用工具](https://github.com/leekaka/deep_net/tree/master/common_tools)
   </br> 批量改名程序
